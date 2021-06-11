@@ -19,24 +19,40 @@ alert(pcNumbers);
 
 var userNumber = [];
 
-while (userNumber.length < 5) {
 
-    var number = parseInt(prompt('Inserisci un numero'));
 
-    if(isNaN(number) || number <= 0 || number > 100) {
-        alert('Puoi inserire solo i numeri da 1 a 100!')
+
+var timeleft = 30;
+
+var countdown = setInterval(function(){
+
+  if(timeleft == 0){
+    clearInterval(countdown);
+    document.getElementById("countdown").innerHTML = "Finished";
+    
+    while (userNumber.length < 5) {
+
+        var number = parseInt(prompt('Inserisci un numero'));
+
+        if(isNaN(number) || number <= 0 || number > 100) {
+            alert('Puoi inserire solo i numeri da 1 a 100!')
+        }
+
+        if (!userNumber.includes(number)) {
+            userNumber.push(number);
+        } else{
+            alert('Hai già inserito questo numero');
+        }
     }
 
-    if (!userNumber.includes(number)) {
-        userNumber.push(number);
-    } else{
-        alert('Hai già inserito questo numero');
-    }
-}
+  } else {
+    document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+  }
 
-var timeLeft=30;
+  timeleft -= 1;
 
-var countdown = setInterval( timer, 1000);
+  
+}, 1000);
 
 
 
@@ -58,14 +74,3 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-function timer() {
-
-    if (timeLeft == 0) {
-        console.log('Tempo scaduto');
-        
-    } else {
-        timeLeft -=1;
-        console.log(timeLeft); 
-    }
-    
-}
