@@ -5,13 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simon Says</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
 
-    <div id="countdown"></div>
-    <div id="result"></div>
+    <span class="moving">4</span>
 
-    <button id="start">start</button>
+    <div class="container">
+
+        <h1 class="playful">Simon Says</h1>
+
+        <div class="rules">
+
+            <h2>Regole del gioco</h2>
+    
+            <p>Cliccando 'PLAY' si aprirà una finestra con 5 numeri. Dopo aver memorizzato i numeri si drovà chiudere la finestra e quindi partità un "conto alla rovescia" al termine del quale dovranno essere inseriti i numeri. Il punteggio verrà calcolato sulla base dei numeri indovinati.</p>
+    
+            <h3>Clicca Play e inizia a giocare!!!</h3>
+
+        </div>
+
+        
+        <div id="countdown"></div>
+        <div id="result"></div>
+    
+        <button id="play" class="theme-gradient-blue-button">Play</button>
+
+        <button id="restart" class="hidden">restart</button>
+
+        <div class ='hidden' id="myprogress">
+            <div class ='hidden' id="mybar"></div>
+        </div>
+
+    </div>
+
 
     <script src="js/script.js"></script>
     

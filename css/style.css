@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: whitesmoke;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.hidden{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.container{
+    background-color: white;
+    color: #3a3b3c;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 50px auto;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size: 60px;
+}
+
+.rules{
+    height: 50%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+p{
+    margin: 20px 0;
+}
+
+button{
+    font-weight: bold;
+    text-transform: uppercase;
+    width:200px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.theme-gradient-blue-button {
+    color: #fff;
+    text-align: center;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    cursor: pointer;
+}
+  
+.theme-gradient-blue-button::before {
+    background: linear-gradient(90deg, #E485F8, #0064f3, #E485F8);
+    width: 200%;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.theme-gradient-blue-button:hover::before {
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+
+
+.playful {
+    text-transform: uppercase;
+    color: #5362F6;
+    text-shadow: 
+        3px 3px        #E485F8,
+        2.75px 2.75px  #E485F8,
+        2.5px 2.5px    #E485F8,
+        2.25px 2.25px  #E485F8,
+        2px 2px        #E485F8,
+        1.75px 1.75px  #E485F8,
+        1.5px 1.5px    #E485F8,
+        1.25px 1.25px  #E485F8,
+        1px 1px        #E485F8,
+        0.75px 0.75px  #E485F8,
+        0.5px 0.5px    #E485F8,
+        0.25px 0.25px  #E485F8;
+}
+
+
+#myprogress {
+    border-radius: 5px;
+    margin: 20px 0;
+    width: 70%;
+    background-color: lightgray;
+    overflow: hidden;
+}
+  
+#mybar {
+    height: 30px;
+    background: linear-gradient(90deg, #E485F8, #0064f3);
+}
+
+#result, #countdown{
+    font-size: 20px;
+    color: #0064f3
+}
+
+#restart{
+    color: #E485F8;
+    border: 1px solid #E485F8;
+}
