@@ -12,38 +12,44 @@
 </head>
 <body>
 
-    <span class="moving">4</span>
-
+    <!-- Start container -->
     <div class="container">
 
+        <!-- Game title -->
         <h1 class="playful">Simon Says</h1>
 
+        <!-- Start div with Rules game -->
         <div class="rules">
 
             <h2>Regole del gioco</h2>
-    
             <p>Cliccando 'PLAY' si aprirà una finestra con 5 numeri. Dopo aver memorizzato i numeri si drovà chiudere la finestra e quindi partità un "conto alla rovescia" al termine del quale dovranno essere inseriti i numeri. Il punteggio verrà calcolato sulla base dei numeri indovinati.</p>
-    
             <h3>Clicca Play e inizia a giocare!!!</h3>
 
         </div>
+        <!-- End div with Rules game -->
 
-        
+        <!-- Countdown: numbers + "finished" -->
         <div id="countdown"></div>
+
+        <!-- Result: how many number and which number the user had found -->
         <div id="result"></div>
-    
+
+        <!-- Button PLAY -->
         <button id="play" class="theme-gradient-blue-button">Play</button>
 
+        <!-- Button RESTART -->
         <button id="restart" class="hidden">restart</button>
 
+        <!-- Start Progress Bar -->
         <div class ='hidden' id="myprogress">
             <div class ='hidden' id="mybar"></div>
         </div>
+        <!-- End Progress Bar -->
 
     </div>
+    <!-- end container -->
 
-
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     
 </body>
 </html>

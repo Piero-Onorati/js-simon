@@ -67,8 +67,10 @@ play.addEventListener('click', function(){
                 if (pcNumbers.includes(number)) {
                     found.push(number);
                 }
-                result = document.getElementById("result").innerHTML = 'hai indovitato ' + found.length + ' numeri:' + found;
+
+                result = 'hai indovitato ' + found.length + ' numeri:' + found;
                 
+                document.getElementById("result").innerHTML = result;
             }
 
             myProgress.className = 'hidden';
@@ -98,7 +100,7 @@ restart.addEventListener('click', function(){
 
     document.getElementById("countdown").className = 'hidden'
 
-    result.className = 'hidden'
+    document.getElementById("result").innerHTML = ''
 
 })
 
