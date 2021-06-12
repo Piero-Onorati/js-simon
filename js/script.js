@@ -35,7 +35,7 @@ play.addEventListener('click', function(){
 
     var timeleft = 30;
 
-    var width =100;
+    var width = 100;
 
     var countdown = setInterval(function(){
 
@@ -92,6 +92,9 @@ play.addEventListener('click', function(){
 });
 
 
+
+
+
 restart.addEventListener('click', function(){
 
     restart.className = "hidden"
@@ -102,7 +105,7 @@ restart.addEventListener('click', function(){
 
     document.getElementById("result").innerHTML = ''
 
-})
+});
 
 
 
