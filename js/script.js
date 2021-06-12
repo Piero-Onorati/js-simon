@@ -68,7 +68,7 @@ play.addEventListener('click', function(){
                     found.push(number);
                 }
 
-                result = 'hai indovitato ' + found.length + ' numeri:' + found;
+                result = 'hai indovinato ' + found.length + ' numeri:' + found;
                 
                 document.getElementById("result").innerHTML = result;
             }
