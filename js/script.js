@@ -12,6 +12,9 @@ var myProgress = document.getElementById('myprogress');
 
 var myBar = document.getElementById('mybar');
 
+
+// ----------- PLAY BUTTON ----------- //
+
 play.addEventListener('click', function(){
 
     play.className += " hidden";
@@ -29,22 +32,19 @@ play.addEventListener('click', function(){
             pcNumbers.push(numRand);
         }
     }
-
     alert(pcNumbers);
 
 
     var timeleft = 30;
-
     var width = 100;
 
     var countdown = setInterval(function(){
 
         document.getElementById("countdown").className = 'show'
 
-    if(timeleft == 0){
+        if(timeleft == 0){
         clearInterval(countdown);
         document.getElementById("countdown").innerHTML = "Finished";
-
 
         // Algorithm to generate user numbers
         setTimeout (function(){
@@ -92,8 +92,7 @@ play.addEventListener('click', function(){
 });
 
 
-
-
+// ----------- RESTART BUTTON ----------- //
 
 restart.addEventListener('click', function(){
 
@@ -106,13 +105,6 @@ restart.addEventListener('click', function(){
     document.getElementById("result").innerHTML = ''
 
 });
-
-
-
-
-
-
-
 
 
 
